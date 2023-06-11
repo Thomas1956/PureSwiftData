@@ -173,13 +173,13 @@ class ListViewController: UICollectionViewController {
 
 
 //--------------------------------------------------------------------------------------------
-// MARK: - A c t i v a t e B u t t o n  ein Button mit einem Optionsfeld zur Auswahl
+// MARK: - ActivateButton - Button with an option for selection
 
 class ActivateButton: UIButton {
-    
+
     var identifier: PersistentIdentifier?
     
-    /// Eigenschaft für das Checkmark im Button
+    /// Property for checkmark
     var isActive = false {
         didSet {
             var config = self.configuration
