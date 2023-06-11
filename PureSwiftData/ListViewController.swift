@@ -112,6 +112,7 @@ class ListViewController: UICollectionViewController {
         }
     }
 
+    //----------------------------------------------------------------------------------------
     /// Update Collection View Header with the number of selected lines
     @MainActor func updateTableHeader() {
         let predicate = #Predicate<Line> { line in line.active == true }
@@ -121,6 +122,7 @@ class ListViewController: UICollectionViewController {
         }
     }
 
+    //----------------------------------------------------------------------------------------
     /// Layout of Collection Views
     private func listLayout() -> UICollectionViewCompositionalLayout {
         var listConfiguration = UICollectionLayoutListConfiguration(appearance: .grouped)
@@ -132,6 +134,7 @@ class ListViewController: UICollectionViewController {
         return UICollectionViewCompositionalLayout.list(using: listConfiguration)
     }
     
+    //----------------------------------------------------------------------------------------
     /// Register Collection View Cell
     func cellRegistrationHandler(cell: UICollectionViewListCell, indexPath: IndexPath, identifier: PersistentIdentifier) {
         
@@ -150,14 +153,15 @@ class ListViewController: UICollectionViewController {
         cell.backgroundConfiguration = backgroundConfiguration
     }
 
+    //----------------------------------------------------------------------------------------
     /// Define Activate Button and set the position on left side of the cell
     private func activeButtonConfiguration(for identifier: PersistentIdentifier) -> UICellAccessory.CustomViewConfiguration
     {
         let button = ActivateButton(identifier: identifier)
         if let line = self.mainContext.object(with: identifier) as? Line {
-            button.isActive = line.active ?? false
+            button.isActive = line.active
         }
-
+        
         button.addTarget(self, action: #selector(didPressActiveButton(_:)), for: .touchUpInside)
         return UICellAccessory.CustomViewConfiguration(customView: button, placement: .leading(displayed: .always))
     }
@@ -165,36 +169,8 @@ class ListViewController: UICollectionViewController {
     /// Activate Button action of the cells
     @objc func didPressActiveButton(_ activateButton: ActivateButton) {
         guard let id = activateButton.identifier, let line = self.mainContext.object(with: id) as? Line else { return }
-        line.active?.toggle()
-        activateButton.isActive = line.active ?? false
-    }
-
- }
-
-
-//--------------------------------------------------------------------------------------------
-// MARK: - ActivateButton - Button with an option for selection
-
-class ActivateButton: UIButton {
-
-    var identifier: PersistentIdentifier?
-    
-    /// Property for checkmark
-    var isActive = false {
-        didSet {
-            var config = self.configuration
-            config?.image = UIImage(systemName: isActive ? "checkmark.square" : "square")
-            self.configuration = config
-        }
-    }
-
-    convenience init(identifier: PersistentIdentifier?) {
-        self.init(frame: .zero)
-        self.identifier = identifier
-        var config = UIButton.Configuration.plain()
-        config.image = UIImage(systemName: isActive ? "checkmark.square" : "square")
-        config.buttonSize = .medium
-        configuration = config
+        line.active.toggle()
+        activateButton.isActive = line.active
     }
 }
 

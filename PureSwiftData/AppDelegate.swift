@@ -19,12 +19,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-        /// App-Informationen auslesen
+        /// App-Information from Bundle
         let dictionary = Bundle.main.infoDictionary!
         applicationName    = dictionary["CFBundleName"] as! String
         applicationVersion = dictionary["CFBundleShortVersionString"] as! String
 
-        /// PersistentContainer laden
+        /// Load PersistentContainer
         Persistence.shared = Persistence(appName: applicationName, appVersion: applicationVersion,
                                          appCopyright: applicationCopyright, inMemory: true, useUndo: false)
         let container = Persistence.shared.modelContainer
@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let modelContext = container.mainContext
         if let lines = try? modelContext.fetch(FetchDescriptor<Line>()), lines.isEmpty {
-            /// Daten generieren
+            /// Genrate Data
             for i in 0..<1000 {
                 let person = Line(name: "Line " + String(i+1), active: false)
                 modelContext.insert(object: person)

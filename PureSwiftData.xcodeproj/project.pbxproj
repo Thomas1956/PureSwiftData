@@ -11,6 +11,7 @@
 		E933445F2A35F22600307F26 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E933445E2A35F22600307F26 /* Persistence.swift */; };
 		E93344612A35F27800307F26 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93344602A35F27800307F26 /* Line.swift */; };
 		E93344632A35FDD500307F26 /* ListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93344622A35FDD500307F26 /* ListHeaderView.swift */; };
+		E93344652A3623E200307F26 /* ActivateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93344642A3623E200307F26 /* ActivateButton.swift */; };
 		E99E1CFD2A35EEA300C46379 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99E1CFC2A35EEA300C46379 /* AppDelegate.swift */; };
 		E99E1CFF2A35EEA300C46379 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99E1CFE2A35EEA300C46379 /* SceneDelegate.swift */; };
 		E99E1D042A35EEA300C46379 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E99E1D022A35EEA300C46379 /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 		E933445E2A35F22600307F26 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		E93344602A35F27800307F26 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		E93344622A35FDD500307F26 /* ListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListHeaderView.swift; sourceTree = "<group>"; };
+		E93344642A3623E200307F26 /* ActivateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivateButton.swift; sourceTree = "<group>"; };
 		E99E1CF92A35EEA300C46379 /* PureSwiftData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PureSwiftData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E99E1CFC2A35EEA300C46379 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E99E1CFE2A35EEA300C46379 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				E933445E2A35F22600307F26 /* Persistence.swift */,
 				E933445C2A35EFE300307F26 /* ListViewController.swift */,
 				E93344622A35FDD500307F26 /* ListHeaderView.swift */,
+				E93344642A3623E200307F26 /* ActivateButton.swift */,
 				E99E1CFC2A35EEA300C46379 /* AppDelegate.swift */,
 				E99E1CFE2A35EEA300C46379 /* SceneDelegate.swift */,
 				E99E1D022A35EEA300C46379 /* Main.storyboard */,
@@ -150,6 +153,7 @@
 				E933445D2A35EFE300307F26 /* ListViewController.swift in Sources */,
 				E933445F2A35F22600307F26 /* Persistence.swift in Sources */,
 				E99E1CFD2A35EEA300C46379 /* AppDelegate.swift in Sources */,
+				E93344652A3623E200307F26 /* ActivateButton.swift in Sources */,
 				E99E1CFF2A35EEA300C46379 /* SceneDelegate.swift in Sources */,
 				E93344612A35F27800307F26 /* Line.swift in Sources */,
 				E93344632A35FDD500307F26 /* ListHeaderView.swift in Sources */,

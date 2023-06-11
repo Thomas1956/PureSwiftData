@@ -9,11 +9,14 @@ import Foundation
 import SwiftData
 
 
+//--------------------------------------------------------------------------------------------
+// MARK: - ModelData for Line
+
 @Model final public class Line {
-    var active: Bool?
-    var name: String?
+    var active: Bool
+    var name: String
     
-    init(name: String?, active: Bool) {
+    init(name: String, active: Bool) {
         self.name = name
         self.active = active
     }
