@@ -1,6 +1,7 @@
 #  PureSwiftData
 
 June 11, 2023
+
 This week at WWDC 2023, Apple introduced SwiftData.
 For many developers who have been using CorData, SwiftData is supposed to make it easier than ever to ensure persistence of an application's data.
 
